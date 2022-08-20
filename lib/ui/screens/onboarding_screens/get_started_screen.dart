@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_food/ui/size_config/size_config_impl2.dart';
 import 'package:shared_food/widgets/custom_botton.dart';
 
+import '../../../core/route_names.dart';
+
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({Key? key}) : super(key: key);
 
@@ -63,7 +65,9 @@ class GetStartedScreen extends StatelessWidget {
                   Expanded(
                     child: CustomButton(
                       text: 'Get Started',
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushNamed(context, RouteNames.loginScreen);
+                      },
                       backgroundColor: Color(0xffED1940),
                     ),
                   ),

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:shared_food/ui/size_config/size_config_impl2.dart';
 import '../ui/screens/onboarding_screens/model/slide.dart';
 
 class SlideItem extends StatefulWidget {
@@ -61,41 +62,18 @@ class _SlideItemState extends State<SlideItem> {
                 children: [
                   Image.asset(slideList[widget.index].imageUrl,),
                   SizedBox(height:30,),
-                  Text(slideList[widget.index].description,
-                  style: TextStyle(
-                    fontSize: 22
-                  ),
-                  textAlign: TextAlign.center,)
+                  Padding(
+                    padding:  EdgeInsets.all(SizeConfig.widthOf(4)),
+                    child: Text(slideList[widget.index].description,
+                    style: TextStyle(
+                      fontSize: 22
+                    ),
+                    textAlign: TextAlign.center,),
+                  )
                 ],
               ),
             ),
           ),
-          //SizedBox(height: 80,),
-          // Row(
-          //   children: [
-          //     Expanded(
-          //       child: ElevatedButton(
-          //         onPressed: () {
-          //           _pageController.nextPage(duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
-          //         },
-          //         style: TextButton.styleFrom(
-          //           backgroundColor: Colors.white,
-          //         ),
-          //         child: Padding(
-          //           padding: const EdgeInsets.all(10.0),
-          //           child: Text(
-          //             'Next',
-          //             style: TextStyle(fontSize: 20, color: Colors.black),
-          //           ),
-          //         ),
-          //       ),
-          //     ),
-          //   ],
-          // ),
-          // SizedBox(height: 30,),
-          // Align(
-          //   alignment: Alignment.bottomRight,
-          //     child: Text('Skip'))
         ],
       ),
     );
