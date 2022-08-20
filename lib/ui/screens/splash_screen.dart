@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/route_names.dart';
 import '../size_config/size_config_impl2.dart';
 
 
@@ -14,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    //startTimer();
+    startTimer();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       SizeConfig.init(context);
     });
@@ -64,5 +65,12 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
     );
+  }
+
+  void startTimer() async{
+    Future.delayed(const Duration(seconds: 3),
+          ()=> Navigator.pushReplacementNamed(context, RouteNames.onBoardingScreen),
+    );
+
   }
 }

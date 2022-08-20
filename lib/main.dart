@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_food/core/route_names.dart';
 import 'package:shared_food/ui/screens/splash_screen.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class SharedFood extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen()
+      home: SplashScreen(),
+      onGenerateRoute: RouteNames.generateRoute,
     );
   }
 }
