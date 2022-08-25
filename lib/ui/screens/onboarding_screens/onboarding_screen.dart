@@ -71,7 +71,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   itemCount: slideList.length,
                   itemBuilder: (ctx, i) => SlideItem(index: i,)),
             ),
-            SizedBox(height: 80,),
+            SizedBox(height: 20,),
             Row(
               children: [
                 Expanded(
@@ -93,7 +93,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 20,),
             Align(
                 alignment: Alignment.bottomRight,
                 child: GestureDetector(

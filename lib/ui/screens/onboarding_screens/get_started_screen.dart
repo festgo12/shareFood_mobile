@@ -57,6 +57,7 @@ class GetStartedScreen extends StatelessWidget {
                 ),
               )
             ),
+            //SizedBox(height: 310,),
             Spacer(),
             Padding(
               padding:  EdgeInsets.all(SizeConfig.widthOf(10)),

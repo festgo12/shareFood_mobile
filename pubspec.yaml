@@ -20,6 +20,10 @@ dev_dependencies:
     sdk: flutter
   flutter_svg: ^1.1.4
   country_picker: ^2.0.15
+  pinput: ^2.2.12
+  video_player: ^2.4.7
+  lottie: ^1.4.1
+  marquee: ^2.2.3
 
   flutter_lints: ^2.0.0
 

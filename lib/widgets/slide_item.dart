@@ -54,14 +54,14 @@ class _SlideItemState extends State<SlideItem> {
                   color: Color(0xffF6E8EC),
                   borderRadius: BorderRadius.only(topRight: Radius.circular(30),bottomLeft: Radius.circular(30))
               ),
-              height: 511,
-              width: double.infinity,
+              //height: 511,
+              //width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(slideList[widget.index].imageUrl,),
-                  SizedBox(height:30,),
+                  //SizedBox(height:30,),
                   Padding(
                     padding:  EdgeInsets.all(SizeConfig.widthOf(4)),
                     child: Text(slideList[widget.index].description,
