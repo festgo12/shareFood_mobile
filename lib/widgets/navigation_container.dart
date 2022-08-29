@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shared_food/ui/screens/cart_screen.dart';
 import 'package:shared_food/ui/screens/home_screen.dart';
 import 'package:shared_food/ui/screens/profile_screen.dart';
 import 'package:shared_food/ui/screens/search_screen.dart';
+import 'package:shared_food/ui/screens/uploadVideo_screen.dart';
 import 'package:shared_food/widgets/custom_bottom_navbar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -15,13 +17,12 @@ class NavigationContainer extends StatefulWidget {
 class _NavigationContainerState extends State<NavigationContainer> {
   int _selectedPageIndex = 0;
 
-  List _pages = [HomeScreen(), SearchScreen(), ProfileScreen()];
-
-  //  _onIconTapped(index){
-  //   setState((){
-  //     _selectedPageIndex = index;
-  //   });
-  // }
+  final List _pages = [
+        HomeScreen(),
+        SearchScreen(),
+        UploadVideoScreen(),
+        ProfileScreen(),
+        CartScreen()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,7 @@ class _NavigationContainerState extends State<NavigationContainer> {
               label: 'Home'
           ),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('svgs/home.svg'),
+              icon: ImageIcon(AssetImage('images/Search.png')),
               label: 'Search'
           ),
           BottomNavigationBarItem(
@@ -67,14 +68,6 @@ class _NavigationContainerState extends State<NavigationContainer> {
           ),
         ],
       ),
-      // bottomNavigationBar: CustomBottomNavBar(
-      //   selectedPageIndex: _selectedPageIndex,
-      //   onIconTap: (index){
-      //     setState((){
-      //       _selectedPageIndex = index;
-      //     });
-      //   },
-      // ),
     );
   }
 }

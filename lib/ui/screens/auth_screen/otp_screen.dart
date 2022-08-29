@@ -14,6 +14,27 @@ class OtpScreen extends StatefulWidget {
 
 class _OtpScreenState extends State<OtpScreen> {
 
+  final defaultPinTheme = PinTheme(
+    width: 56,
+    height: 56,
+    textStyle: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w600),
+    decoration: BoxDecoration(
+      //border: Border.all(color:Colors.black),
+      borderRadius: BorderRadius.circular(20),
+    ),
+  );
+
+  // final focusedPinTheme = defaultPinTheme.copyDecorationWith(
+  //   border: Border.all(color: Color.fromRGBO(114, 178, 238, 1)),
+  //   borderRadius: BorderRadius.circular(8),
+  // );
+
+  // final submittedPinTheme = defaultPinTheme.copyWith(
+  //   decoration: defaultPinTheme.decoration.copyWith(
+  //     color: Color.fromRGBO(234, 239, 243, 1),
+  //   ),
+  // );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +60,18 @@ class _OtpScreenState extends State<OtpScreen> {
                 fontWeight: FontWeight.w400
             ),),
             SizedBox(height: 40),
-
+            Pinput(
+              //defaultPinTheme: defaultPinTheme,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //focusedPinTheme: focusedPinTheme,
+              //submittedPinTheme: submittedPinTheme,
+              // validator: (s) {
+              //   return s == '2222' ? null : 'Pin is incorrect';
+              // },
+              pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+              showCursor: true,
+              onCompleted: (pin) => print(pin),
+            ),
             Spacer(),
             Row(
               children: [
