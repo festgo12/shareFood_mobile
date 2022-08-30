@@ -60,7 +60,7 @@ class _SlideItemState extends State<SlideItem> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(slideList[widget.index].imageUrl,),
+                  Expanded(child: Image.asset(slideList[widget.index].imageUrl,)),
                   //SizedBox(height:30,),
                   Padding(
                     padding:  EdgeInsets.all(SizeConfig.widthOf(4)),

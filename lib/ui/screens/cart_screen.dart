@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_food/widgets/custom_botton.dart';
+import '../../core/route_names.dart';
 import '../size_config/size_config_impl2.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -16,6 +17,7 @@ class _CartScreenState extends State<CartScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        centerTitle: true,
         iconTheme: IconThemeData(
           color: Colors.black
         ),
@@ -69,14 +71,13 @@ class _CartScreenState extends State<CartScreen> {
             ),),
             SizedBox(height: 10,),
             Row(
-              //crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Color(0xffFDE8EC),
                       image: DecorationImage(
-                          image:AssetImage('images/Location.png'),
+                          image:AssetImage('images/rice.png'),
                           fit: BoxFit.cover
                       )
                   ),
@@ -84,38 +85,43 @@ class _CartScreenState extends State<CartScreen> {
                   height: 71,
                 ),
                 SizedBox(width: 15,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children:  [
-                    Text('Rice and beans combo',style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold),),
-                    SizedBox(height: 15,),
-                    Text('N2,500.00',style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400
-                    ),),
-                    SizedBox(height: 5,),
-                    Row(
-                      children: [
-                        Text('X2 = N5,000.00',style: TextStyle(
+                Expanded(
+                  child: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children:  [
+                        Text('Rice and beans combo',style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(height: 15,),
+                        Text('N2,500.00',style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400
                         ),),
-                       SizedBox(width: 120,),
-                       //Spacer(),
+                        SizedBox(height: 5,),
                         Row(
                           children: [
-                            Icon(Icons.remove_circle_outline),
-                            SizedBox(width: 5,),
-                            Text('2'),
-                            SizedBox(width: 5,),
-                            Icon(Icons.add_circle_outline),
+                            Text('X2 = N5,000.00',style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400
+                            ),),
+                           //SizedBox(width: 120,),
+                           Spacer(),
+                            Row(
+                              children: [
+                                Icon(Icons.remove_circle_outline),
+                                SizedBox(width: 5,),
+                                Text('2'),
+                                SizedBox(width: 5,),
+                                Icon(Icons.add_circle_outline),
+                              ],
+                            ),
                           ],
-                        ),
+                        )
                       ],
-                    )
-                  ],
+                    ),
+                  ),
                 )
               ],
             ),
@@ -126,21 +132,24 @@ class _CartScreenState extends State<CartScreen> {
                 CustomButton(
                   text: 'Save',
                   onPressed: (){},
-                  backgroundColor: Color(0xffFBD1D9),
+                  textColor: Colors.black,
+                  backgroundColor: Colors.cyan,
                 ),
                 SizedBox(width: 10,),
                 CustomButton(
                   text: 'Remove',
                   onPressed: (){},
-                  backgroundColor: Color(0xffFBD1D9),
+                  textColor: Colors.black,
+                  backgroundColor: Colors.cyan,
                 ),
                 SizedBox(width: 10,),
                 CustomButton(
                   text: 'Checkout',
+                  textColor: Colors.black,
                   onPressed: (){
-                    print('null');
+                    Navigator.pushNamed(context, RouteNames.checkOutScreen);
                   },
-                  backgroundColor: Color(0xffFBD1D9),
+                  backgroundColor: Colors.cyan,
                 )
               ],
             )

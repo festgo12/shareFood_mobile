@@ -24,6 +24,7 @@ dev_dependencies:
   video_player: ^2.4.7
   lottie: ^1.4.1
   marquee: ^2.2.3
+  flutter_switch: ^0.3.2
 
   flutter_lints: ^2.0.0
 
