@@ -4,6 +4,7 @@ import 'package:shared_food/ui/screens/auth_screen/login_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/otp_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/verify_mobile_num_screen.dart';
 import 'package:shared_food/ui/screens/checkout_screen.dart';
+import 'package:shared_food/ui/screens/confirm_order_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/get_started_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/onboarding_screen.dart';
 import 'package:shared_food/widgets/navigation_container.dart';
@@ -19,6 +20,7 @@ class RouteNames{
   static const String otpScreen = 'otpScreen';
   static const String navigationContainer = 'navigationContainer';
   static const String checkOutScreen = 'checkOutScreen';
+  static const String confirmOrderScreen = 'confirmOrderScreen';
 
 
 
@@ -31,6 +33,7 @@ class RouteNames{
     otpScreen: (context) => const OtpScreen(),
     navigationContainer: (context) => const NavigationContainer(),
     checkOutScreen: (context) => const CheckOutScreen(),
+    confirmOrderScreen: (context) => const ConfirmOrderScreen(),
   };
 
 
@@ -52,6 +55,8 @@ class RouteNames{
         return MaterialPageRoute(builder: (context) => const NavigationContainer());
       case checkOutScreen:
         return MaterialPageRoute(builder: (context) => const CheckOutScreen());
+      case confirmOrderScreen:
+        return MaterialPageRoute(builder: (context) => const ConfirmOrderScreen());
 
     //Default Route is error route
       default:

@@ -75,7 +75,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                children: [
+                                children: const [
                                   Text(
                                     'Rice and beans combo',
                                     style: TextStyle(
@@ -89,9 +89,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                   ),
                                 ],
                               ),
-                              SizedBox(
-                                height: 3,
-                              ),
+                              SizedBox(height: 8),
                               Row(
                                 children: [
                                   Text(
@@ -101,7 +99,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                                   ),
                                   Spacer(),
                                   Row(
-                                    children: [
+                                    children: const [
                                       Icon(Icons.remove_circle_outline),
                                       SizedBox(
                                         width: 5,
@@ -346,7 +344,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                             child: CustomButton(
                               text: 'Confirm Order',
                               onPressed: (){
-                                Navigator.pushNamed(context, RouteNames.verifyMobileScreen);
+                                Navigator.pushNamed(context, RouteNames.confirmOrderScreen);
                               },
                               backgroundColor: Color(0xffED1940),
                             ),
