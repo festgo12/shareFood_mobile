@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
           return Stack(
             alignment: Alignment.bottomCenter,
             children: [
-              Container(color: Colors.red,),
+              Container(color: Colors.black ,),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
