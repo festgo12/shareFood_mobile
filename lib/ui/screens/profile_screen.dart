@@ -122,13 +122,21 @@ class ProfileScreen extends StatelessWidget {
                 child: TabBar(
                   labelColor: Colors.black,
                     indicatorColor: Colors.grey,
-                    tabs:[
+                    tabs:const [
                   Tab(icon: ImageIcon(AssetImage('images/postIcon.png')),text:"Post"),
-                  Tab(icon: ImageIcon(AssetImage('images/react.png')),text: "React"),
+                  Tab(icon: ImageIcon(AssetImage('images/react.png')),text: "Reacts"),
                   Tab(icon: ImageIcon(AssetImage('images/saved.png')),text: "Saved"),
                   Tab(icon: ImageIcon(AssetImage('images/draft.png')),text: "Drafts"),
                 ]),
-              )
+              ),
+              Expanded(
+                child: TabBarView(children: const[
+                  Center(child: Text('Posts'),),
+                  Center(child: Text('Reacts'),),
+                  Center(child: Text('saved'),),
+                  Center(child: Text('Drafts'))
+                ]),
+              ),
             ],
           ),
         )
