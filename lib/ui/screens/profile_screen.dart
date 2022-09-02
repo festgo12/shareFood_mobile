@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_food/ui/screens/post_tab.dart';
 import 'package:shared_food/ui/size_config/size_config_impl2.dart';
 
 import '../../widgets/custom_botton.dart';
@@ -130,8 +131,8 @@ class ProfileScreen extends StatelessWidget {
                 ]),
               ),
               Expanded(
-                child: TabBarView(children: const[
-                  Center(child: Text('Posts'),),
+                child: TabBarView(children: [
+                  PostTabScreen(),
                   Center(child: Text('Reacts'),),
                   Center(child: Text('saved'),),
                   Center(child: Text('Drafts'))
