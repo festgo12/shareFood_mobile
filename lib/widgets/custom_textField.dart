@@ -61,7 +61,9 @@ class _CustomTextFieldState extends State<BoxTextField> {
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         enabledBorder:  OutlineInputBorder(
-          borderSide: BorderSide(),
+          borderSide: BorderSide(
+            color: Colors.black26
+          ),
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         focusedBorder:  OutlineInputBorder(

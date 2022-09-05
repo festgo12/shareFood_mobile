@@ -18,12 +18,16 @@ class _ForBetterSearchScreenState extends State<ForBetterSearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text('For Better Search',
         style: TextStyle(
           color: Colors.black
         ),),
+        centerTitle: true,
         actions: [
           Row(
             children: [

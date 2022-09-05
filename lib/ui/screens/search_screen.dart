@@ -36,6 +36,7 @@ class SearchScreen extends StatelessWidget {
                     icon: SvgPicture.asset('svgs/settings.svg'),
                     onPressed: () {
                       // do something
+                      Navigator.pushNamed(context, RouteNames.settingsScreen);
                     },
                   )
                 ],

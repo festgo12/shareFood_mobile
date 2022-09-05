@@ -8,6 +8,7 @@ import 'package:shared_food/ui/screens/confirm_order_screen.dart';
 import 'package:shared_food/ui/screens/for_better_search_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/get_started_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/onboarding_screen.dart';
+import 'package:shared_food/ui/screens/settings_screen.dart';
 import 'package:shared_food/widgets/navigation_container.dart';
 import '../ui/screens/splash_screen.dart';
 
@@ -23,6 +24,7 @@ class RouteNames{
   static const String checkOutScreen = 'checkOutScreen';
   static const String confirmOrderScreen = 'confirmOrderScreen';
   static const String forBetterSearchScreen = 'forBetterSearchScreen';
+  static const String settingsScreen = 'settingsScreen';
 
 
 
@@ -37,6 +39,7 @@ class RouteNames{
     checkOutScreen: (context) => const CheckOutScreen(),
     confirmOrderScreen: (context) => const ConfirmOrderScreen(),
     forBetterSearchScreen: (context) => const ForBetterSearchScreen(),
+    settingsScreen: (context) => const SettingsScreen(),
   };
 
 
@@ -62,6 +65,8 @@ class RouteNames{
         return MaterialPageRoute(builder: (context) => const ConfirmOrderScreen());
       case forBetterSearchScreen:
         return MaterialPageRoute(builder: (context) => const ForBetterSearchScreen());
+      case settingsScreen:
+        return MaterialPageRoute(builder: (context) => const SettingsScreen());
 
     //Default Route is error route
       default:
