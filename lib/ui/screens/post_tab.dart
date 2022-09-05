@@ -31,7 +31,7 @@ class _PostTabScreenState extends State<PostTabScreen> {
         ),
         itemBuilder: (context, index){
           return Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding:  EdgeInsets.all(8.0),
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
