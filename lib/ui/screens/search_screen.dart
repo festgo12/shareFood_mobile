@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_food/widgets/custom_textField.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../core/route_names.dart';
 import '../size_config/size_config_impl2.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -18,12 +19,17 @@ class SearchScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Expanded(child: BoxTextField(
-                    prefix: Icon(Icons.search,size: 30,color: Colors.black,),
+                  Expanded(
+                      child: BoxTextField(prefix: Icon(Icons.search,size: 30,color: Colors.black,),
                   )),
                   SizedBox(width: 5,),
-                  ImageIcon(
-                    AssetImage('images/scaning.png'),size: 35,
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteNames.forBetterSearchScreen);
+                    },
+                    child: ImageIcon(
+                      AssetImage('images/scaning.png'),size: 35,
+                    ),
                   ),
                   //SizedBox(width: 5,),
                   IconButton(

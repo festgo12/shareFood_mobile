@@ -5,6 +5,7 @@ import 'package:shared_food/ui/screens/auth_screen/otp_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/verify_mobile_num_screen.dart';
 import 'package:shared_food/ui/screens/checkout_screen.dart';
 import 'package:shared_food/ui/screens/confirm_order_screen.dart';
+import 'package:shared_food/ui/screens/for_better_search_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/get_started_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/onboarding_screen.dart';
 import 'package:shared_food/widgets/navigation_container.dart';
@@ -21,6 +22,7 @@ class RouteNames{
   static const String navigationContainer = 'navigationContainer';
   static const String checkOutScreen = 'checkOutScreen';
   static const String confirmOrderScreen = 'confirmOrderScreen';
+  static const String forBetterSearchScreen = 'forBetterSearchScreen';
 
 
 
@@ -34,6 +36,7 @@ class RouteNames{
     navigationContainer: (context) => const NavigationContainer(),
     checkOutScreen: (context) => const CheckOutScreen(),
     confirmOrderScreen: (context) => const ConfirmOrderScreen(),
+    forBetterSearchScreen: (context) => const ForBetterSearchScreen(),
   };
 
 
@@ -57,6 +60,8 @@ class RouteNames{
         return MaterialPageRoute(builder: (context) => const CheckOutScreen());
       case confirmOrderScreen:
         return MaterialPageRoute(builder: (context) => const ConfirmOrderScreen());
+      case forBetterSearchScreen:
+        return MaterialPageRoute(builder: (context) => const ForBetterSearchScreen());
 
     //Default Route is error route
       default:
