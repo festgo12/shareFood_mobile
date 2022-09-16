@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_food/ui/screens/post_tab.dart';
 import 'package:shared_food/ui/size_config/size_config_impl2.dart';
 
+import '../../core/route_names.dart';
 import '../../widgets/custom_botton.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -16,7 +17,8 @@ class ProfileScreen extends StatelessWidget {
           appBar: AppBar(
             leading: IconButton(
               icon: SvgPicture.asset('svgs/person.svg'),
-              onPressed: () => Navigator.of(context).pop(),
+              onPressed: () {Navigator.of(context).pop();
+              }
             ),
             elevation: 0,
             backgroundColor: Colors.transparent,
@@ -29,6 +31,7 @@ class ProfileScreen extends StatelessWidget {
                 icon: SvgPicture.asset('svgs/settings.svg'),
                 onPressed: () {
                   // do something
+                  Navigator.pushNamed(context, RouteNames.settingsScreen);
                 },
               )
             ],

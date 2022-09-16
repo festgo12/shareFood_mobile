@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../widgets/custom_listTile.dart';
 import '../size_config/size_config_impl2.dart';
 
 
@@ -138,21 +139,4 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 }
 
-class CustomListTile extends StatelessWidget {
-  final Widget? leading;
-  final String? title;
-  final Widget? trailing;
 
-  const CustomListTile({
-    Key? key, this.leading, this.title, this.trailing,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: leading,
-      title: Text(title!),
-      trailing: trailing
-    );
-  }
-}

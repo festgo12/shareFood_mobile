@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_food/ui/screens/activity_screens/all_activity_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/login_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/otp_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/verify_mobile_num_screen.dart';
@@ -25,6 +26,7 @@ class RouteNames{
   static const String confirmOrderScreen = 'confirmOrderScreen';
   static const String forBetterSearchScreen = 'forBetterSearchScreen';
   static const String settingsScreen = 'settingsScreen';
+  static const String allActivityScreen = 'allActivityScreen';
 
 
 
@@ -40,6 +42,7 @@ class RouteNames{
     confirmOrderScreen: (context) => const ConfirmOrderScreen(),
     forBetterSearchScreen: (context) => const ForBetterSearchScreen(),
     settingsScreen: (context) => const SettingsScreen(),
+    allActivityScreen: (context) => const AllActivityScreen(),
   };
 
 
@@ -67,6 +70,8 @@ class RouteNames{
         return MaterialPageRoute(builder: (context) => const ForBetterSearchScreen());
       case settingsScreen:
         return MaterialPageRoute(builder: (context) => const SettingsScreen());
+      case allActivityScreen:
+        return MaterialPageRoute(builder: (context) => const AllActivityScreen());
 
     //Default Route is error route
       default:
