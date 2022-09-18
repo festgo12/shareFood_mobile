@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               PageView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 3,
+                  itemCount: 5,
                   itemBuilder: (ctx,i){
                     return Stack(
                       alignment: Alignment.bottomCenter,

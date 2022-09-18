@@ -23,6 +23,8 @@ class _PostTabScreenState extends State<PostTabScreen> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      //primary: false,
+      shrinkWrap: true,
       itemCount: imageList.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,

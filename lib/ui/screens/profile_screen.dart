@@ -134,8 +134,10 @@ class ProfileScreen extends StatelessWidget {
                 ]),
               ),
               Expanded(
-                child: TabBarView(children: [
+                child: TabBarView(
+                    children: const [
                   PostTabScreen(),
+                  //Center(child: Text('Reacts'),),
                   Center(child: Text('Reacts'),),
                   Center(child: Text('saved'),),
                   Center(child: Text('Drafts'))

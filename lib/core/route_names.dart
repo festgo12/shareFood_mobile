@@ -6,10 +6,15 @@ import 'package:shared_food/ui/screens/auth_screen/otp_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/verify_mobile_num_screen.dart';
 import 'package:shared_food/ui/screens/checkout_screen.dart';
 import 'package:shared_food/ui/screens/confirm_order_screen.dart';
+import 'package:shared_food/ui/screens/followers_screen.dart';
 import 'package:shared_food/ui/screens/for_better_search_screen.dart';
+import 'package:shared_food/ui/screens/meali_screen.dart';
+import 'package:shared_food/ui/screens/mentions_screen.dart';
+import 'package:shared_food/ui/screens/nice_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/get_started_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/onboarding_screen.dart';
 import 'package:shared_food/ui/screens/settings_screen.dart';
+import 'package:shared_food/ui/screens/yummy_screen.dart';
 import 'package:shared_food/widgets/navigation_container.dart';
 import '../ui/screens/splash_screen.dart';
 
@@ -27,6 +32,13 @@ class RouteNames{
   static const String forBetterSearchScreen = 'forBetterSearchScreen';
   static const String settingsScreen = 'settingsScreen';
   static const String allActivityScreen = 'allActivityScreen';
+  static const String niceScreen = 'niceScreen';
+  static const String yummyScreen = 'yummyScreen';
+  static const String mentionsScreen = 'mentionsScreen';
+  static const String followersScreen = 'followersScreen';
+  static const String mealiScreen = 'mealiScreen';
+
+
 
 
 
@@ -43,6 +55,11 @@ class RouteNames{
     forBetterSearchScreen: (context) => const ForBetterSearchScreen(),
     settingsScreen: (context) => const SettingsScreen(),
     allActivityScreen: (context) => const AllActivityScreen(),
+    niceScreen: (context) => const NiceScreen(),
+    yummyScreen: (context) => const YummyScreen(),
+    mentionsScreen: (context) => const MentionsScreen(),
+    followersScreen: (context) => const FollowersScreen(),
+    mealiScreen: (context) => const MealiScreen(),
   };
 
 
@@ -72,6 +89,16 @@ class RouteNames{
         return MaterialPageRoute(builder: (context) => const SettingsScreen());
       case allActivityScreen:
         return MaterialPageRoute(builder: (context) => const AllActivityScreen());
+      case niceScreen:
+        return MaterialPageRoute(builder: (context) => const NiceScreen());
+      case yummyScreen:
+        return MaterialPageRoute(builder: (context) => const YummyScreen());
+      case mentionsScreen:
+        return MaterialPageRoute(builder: (context) => const MentionsScreen());
+      case followersScreen:
+        return MaterialPageRoute(builder: (context) => const FollowersScreen());
+      case mealiScreen:
+        return MaterialPageRoute(builder: (context) => const MealiScreen());
 
     //Default Route is error route
       default:

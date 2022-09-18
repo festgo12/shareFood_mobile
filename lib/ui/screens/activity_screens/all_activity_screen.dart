@@ -20,7 +20,7 @@ class AllActivityScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: BoxTextField(prefix: Icon(Icons.search,size: 30,color: Colors.black,),
+        title: BoxTextField(label: 'All activity',
         ),
         actions: [
           IconButton(
@@ -55,7 +55,7 @@ class AllActivityScreen extends StatelessWidget {
                 SizedBox(width: 10,),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text('Charles27, Timothy, and 5 others',style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w400
@@ -82,27 +82,37 @@ class AllActivityScreen extends StatelessWidget {
             Expanded(
               child: ListView(
                 children:  [
-                  CustomListTile(
-                      leading: SvgPicture.asset(
-                        'svgs/nice.svg',
-                        width: 40,
-                        height: 40,
-                      ),
-                      title: 'Nice',
-                      trailing: SvgPicture.asset(
-                        'svgs/noti.svg',
-                        width: 12,
-                        height: 14,
-                      ),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteNames.niceScreen);
+                    },
+                    child: CustomListTile(
+                        leading: SvgPicture.asset(
+                          'svgs/nice.svg',
+                          width: 40,
+                          height: 40,
+                        ),
+                        title: 'Nice',
+                        trailing: SvgPicture.asset(
+                          'svgs/noti.svg',
+                          width: 12,
+                          height: 14,
+                        ),
+                    ),
                   ),
-                  CustomListTile(
-                      leading: SvgPicture.asset(
-                        'svgs/yummy.svg',
-                        width: 40,
-                        height: 40,
-                      ),
-                      title: 'Yummy',
-                      //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteNames.yummyScreen);
+                    },
+                    child: CustomListTile(
+                        leading: SvgPicture.asset(
+                          'svgs/yummy.svg',
+                          width: 40,
+                          height: 40,
+                        ),
+                        title: 'Yummy',
+                        //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                    ),
                   ),
                   CustomListTile(
                       leading: SvgPicture.asset(
@@ -113,23 +123,33 @@ class AllActivityScreen extends StatelessWidget {
                       title: 'Comments',
                      // trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
                   ),
-                  CustomListTile(
-                      leading: SvgPicture.asset(
-                        'svgs/mentions.svg',
-                        width: 40,
-                        height: 40,
-                      ),
-                      title: 'Mentions',
-                     // trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteNames.mentionsScreen);
+                    },
+                    child: CustomListTile(
+                        leading: SvgPicture.asset(
+                          'svgs/mentions.svg',
+                          width: 40,
+                          height: 40,
+                        ),
+                        title: 'Mentions',
+                       // trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                    ),
                   ),
-                  CustomListTile(
-                      leading: SvgPicture.asset(
-                        'svgs/followers.svg',
-                        width: 40,
-                        height: 40,
-                      ),
-                      title: 'Followers',
-                      //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteNames.followersScreen);
+                    },
+                    child: CustomListTile(
+                        leading: SvgPicture.asset(
+                          'svgs/followers.svg',
+                          width: 40,
+                          height: 40,
+                        ),
+                        title: 'Followers',
+                        //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                    ),
                   ),
                   CustomListTile(
                       leading: SvgPicture.asset(
@@ -149,14 +169,18 @@ class AllActivityScreen extends StatelessWidget {
                       title: 'Requests',
                       //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
                   ),
-                  CustomListTile(
-                      leading: SvgPicture.asset(
-                        'svgs/meali.svg',
-                        width: 40,
-                        height: 40,
-                      ),
-                      title: 'Meali',
-                      //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteNames.mealiScreen);
+                    },
+                    child: CustomListTile(
+                        leading: SvgPicture.asset(
+                          'svgs/meali.svg',
+                          width: 40,
+                          height: 40,
+                        ),
+                        title: 'Meali',
+                    ),
                   ),
                   CustomListTile(
                       leading: SvgPicture.asset(
