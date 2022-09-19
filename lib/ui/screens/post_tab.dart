@@ -23,6 +23,7 @@ class _PostTabScreenState extends State<PostTabScreen> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      physics: NeverScrollableScrollPhysics(),
       //primary: false,
       shrinkWrap: true,
       itemCount: imageList.length,

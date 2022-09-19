@@ -49,8 +49,8 @@ class SearchScreen extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
                   children: const [
-                    PopularServices(image:'images/chicken_republic.png',),
-                    PopularServices(image:'images/chicken_republic.png',),
+                    PopularServices(image:'images/chicken_republic.png',name: 'Explore Restuarants',),
+                    PopularServices(image:'images/chicken_republic.png',name: 'Explore Restuarants'),
                   ],
                 ),
               ),
@@ -141,8 +141,9 @@ class SearchScreen extends StatelessWidget {
 
 class PopularServices extends StatelessWidget {
   final String image;
+  final String name;
 
-  const PopularServices({Key? key, required this.image,}) : super(key: key);
+  const PopularServices({Key? key, required this.image, required this.name,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -156,6 +157,24 @@ class PopularServices extends StatelessWidget {
               fit: BoxFit.cover
           ),
         ),
+        child: Align(
+          alignment: Alignment.bottomRight,
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Row(
+             mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(name,style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w900
+                ),),
+                SizedBox(width: 5,),
+                Icon(Icons.arrow_forward_ios,color: Colors.white,size: 15,)
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -164,6 +183,7 @@ class PopularServices extends StatelessWidget {
 
 class FoodMoments extends StatelessWidget {
   final String image;
+
 
   const FoodMoments({Key? key, required this.image,}) : super(key: key);
 
