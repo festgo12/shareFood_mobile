@@ -31,12 +31,12 @@ class _ForBetterSearchScreenState extends State<ForBetterSearchScreen> {
         actions: [
           Row(
             children: [
-              IconButton(
-                icon: SvgPicture.asset('svgs/info.svg'),
-                onPressed: () {
-                  // do something
-                },
-              ),
+              // IconButton(
+              //   icon: SvgPicture.asset('svgs/info.svg'),
+              //   onPressed: () {
+              //     // do something
+              //   },
+              // ),
               //SizedBox(width: 5,),
               IconButton(
                 icon: SvgPicture.asset('svgs/settings.svg'),

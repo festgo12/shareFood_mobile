@@ -18,6 +18,9 @@ class _PostTabScreenState extends State<PostTabScreen> {
     'images/post2.png',
     'images/post1.png',
     'images/post3.png',
+    'images/post3.png',
+    'images/post2.png',
+    'images/post1.png',
 
   ];
   @override

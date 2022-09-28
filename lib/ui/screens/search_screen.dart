@@ -48,9 +48,11 @@ class SearchScreen extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  children: const [
-                    PopularServices(image:'images/chicken_republic.png',name: 'Explore Restuarants',),
-                    PopularServices(image:'images/chicken_republic.png',name: 'Explore Restuarants'),
+                  children: [
+                    PopularServices(image:'images/chicken_republic.png',name: 'Explore Restuarants',onPressed: (){
+                      Navigator.pushNamed(context, RouteNames.exploreRestaurantScreen);
+                    },),
+                    PopularServices(image:'images/chicken_republic.png',name: 'Explore Restuarants',onPressed: (){},),
                   ],
                 ),
               ),
@@ -142,8 +144,9 @@ class SearchScreen extends StatelessWidget {
 class PopularServices extends StatelessWidget {
   final String image;
   final String name;
+  final VoidCallback? onPressed;
 
-  const PopularServices({Key? key, required this.image, required this.name,}) : super(key: key);
+  const PopularServices({Key? key, required this.image, required this.name, this.onPressed,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -164,11 +167,14 @@ class PopularServices extends StatelessWidget {
             child: Row(
              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(name,style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w900
-                ),),
+                GestureDetector(
+                  onTap: onPressed,
+                  child: Text(name,style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w900
+                  ),),
+                ),
                 SizedBox(width: 5,),
                 Icon(Icons.arrow_forward_ios,color: Colors.white,size: 15,)
               ],
