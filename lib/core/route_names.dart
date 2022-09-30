@@ -4,6 +4,7 @@ import 'package:shared_food/ui/screens/activity_screens/all_activity_screen.dart
 import 'package:shared_food/ui/screens/auth_screen/login_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/otp_screen.dart';
 import 'package:shared_food/ui/screens/auth_screen/verify_mobile_num_screen.dart';
+import 'package:shared_food/ui/screens/business_profile_screen.dart';
 import 'package:shared_food/ui/screens/checkout_screen.dart';
 import 'package:shared_food/ui/screens/confirm_order_screen.dart';
 import 'package:shared_food/ui/screens/explore_resturant_screen.dart';
@@ -15,6 +16,7 @@ import 'package:shared_food/ui/screens/nice_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/get_started_screen.dart';
 import 'package:shared_food/ui/screens/onboarding_screens/onboarding_screen.dart';
 import 'package:shared_food/ui/screens/settings_screen.dart';
+import 'package:shared_food/ui/screens/users_profile.dart';
 import 'package:shared_food/ui/screens/yummy_screen.dart';
 import 'package:shared_food/widgets/navigation_container.dart';
 import '../ui/screens/splash_screen.dart';
@@ -39,6 +41,8 @@ class RouteNames{
   static const String followersScreen = 'followersScreen';
   static const String mealiScreen = 'mealiScreen';
   static const String exploreRestaurantScreen = 'exploreRestaurantScreen';
+  static const String usersProfile = 'usersProfile';
+  static const String businessProfile = 'businessProfile';
 
 
 
@@ -63,6 +67,8 @@ class RouteNames{
     followersScreen: (context) => const FollowersScreen(),
     mealiScreen: (context) => const MealiScreen(),
     exploreRestaurantScreen: (context) => const ExploreRestaurantScreen(),
+    usersProfile: (context) => const UsersProfile(),
+    businessProfile: (context) => const BusinessProfileScreen(),
   };
 
 
@@ -104,6 +110,10 @@ class RouteNames{
         return MaterialPageRoute(builder: (context) => const MealiScreen());
       case exploreRestaurantScreen:
         return MaterialPageRoute(builder: (context) => const ExploreRestaurantScreen());
+      case usersProfile:
+        return MaterialPageRoute(builder: (context) => const UsersProfile());
+      case businessProfile:
+        return MaterialPageRoute(builder: (context) => const BusinessProfileScreen());
 
     //Default Route is error route
       default:

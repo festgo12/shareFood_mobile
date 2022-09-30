@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../core/route_names.dart';
+
 class HomeSideBar extends StatefulWidget {
   const HomeSideBar({Key? key}) : super(key: key);
 
@@ -53,16 +55,21 @@ class _HomeSideBarState extends State<HomeSideBar> {
       clipBehavior: Clip.none,
       alignment: Alignment.bottomCenter,
       children: [
-        Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.white),
-            borderRadius: BorderRadius.circular(25),
-            image: DecorationImage(
-              image:AssetImage('images/pdp.png'),
-              fit: BoxFit.cover
-            )
+        GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(context, RouteNames.usersProfile);
+          },
+          child: Container(
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.white),
+              borderRadius: BorderRadius.circular(25),
+              image: DecorationImage(
+                image:AssetImage('images/pdp.png'),
+                fit: BoxFit.cover
+              )
+            ),
           ),
         )
       ],

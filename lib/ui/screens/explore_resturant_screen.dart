@@ -82,16 +82,21 @@ class _ExploreRestaurantScreenState extends State<ExploreRestaurantScreen> {
               SizedBox(height: 20,),
               Column(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('images/dominos.png'),
-                        fit: BoxFit.cover
-                      )
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteNames.businessProfile);
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('images/dominos.png'),
+                          fit: BoxFit.cover
+                        )
+                      ),
+                      width: double.infinity,
+                      height: 101,
+                      //color: Colors.redAccent,
                     ),
-                    width: double.infinity,
-                    height: 101,
-                    //color: Colors.redAccent,
                   ),
                   SizedBox(height: 10,),
                   Row(
