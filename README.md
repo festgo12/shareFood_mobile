@@ -6,6 +6,8 @@ Share Food mobile app
 ### Team members 
 - [Festus](https://github.com/festgo12).
 - [Petec ](https://github.com/Petec0x0).
+- [Bell ](http://github.com/BellOmuboye)
+- [teemuzik](https://github.com/teezcode)
 
 
 ## CODE OF CONDUCT

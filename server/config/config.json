@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": 80445520,
+    "database": "sharefood",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "sharefood",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "sharefood",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
