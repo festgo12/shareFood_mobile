@@ -93,10 +93,34 @@ class AllActivityScreen extends StatelessWidget {
                           height: 40,
                         ),
                         title: 'Nice',
-                        trailing: SvgPicture.asset(
-                          'svgs/noti.svg',
-                          width: 12,
-                          height: 14,
+                        trailing: Stack(
+                          children: [
+                            Container(
+                              width: 10,
+                              height: 10,
+                              //color: Colors.yellow,
+                            ),
+                            SvgPicture.asset(
+                              'svgs/noti.svg',
+                              width: 20,
+                              height: 20,
+                            ),
+                            Positioned(
+                              left: 5,
+                              child: Container(
+                                width: 20,
+                                height: 20,
+                                //color: Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 1.0, top: 3),
+                                  child: Text('3',style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 8
+                                  ),),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                     ),
                   ),
@@ -111,7 +135,35 @@ class AllActivityScreen extends StatelessWidget {
                           height: 40,
                         ),
                         title: 'Yummy',
-                        //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                      trailing: Stack(
+                        children: [
+                          Container(
+                            width: 10,
+                            height: 10,
+                            //color: Colors.yellow,
+                          ),
+                          SvgPicture.asset(
+                            'svgs/noti.svg',
+                            width: 20,
+                            height: 20,
+                          ),
+                          Positioned(
+                            left: 5,
+                            child: Container(
+                              width: 20,
+                              height: 20,
+                              //color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 1.0, top: 3),
+                                child: Text('3',style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 8
+                                ),),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   CustomListTile(
@@ -121,7 +173,35 @@ class AllActivityScreen extends StatelessWidget {
                         height: 40,
                       ),
                       title: 'Comments',
-                     // trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                    trailing: Stack(
+                      children: [
+                        Container(
+                          width: 10,
+                          height: 10,
+                          //color: Colors.yellow,
+                        ),
+                        SvgPicture.asset(
+                          'svgs/noti.svg',
+                          width: 20,
+                          height: 20,
+                        ),
+                        Positioned(
+                          left: 5,
+                          child: Container(
+                            width: 20,
+                            height: 20,
+                            //color: Colors.white,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 1.0, top: 3),
+                              child: Text('3',style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 8
+                              ),),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   GestureDetector(
                     onTap: (){
@@ -134,7 +214,35 @@ class AllActivityScreen extends StatelessWidget {
                           height: 40,
                         ),
                         title: 'Mentions',
-                       // trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                      trailing: Stack(
+                        children: [
+                          Container(
+                            width: 10,
+                            height: 10,
+                            //color: Colors.yellow,
+                          ),
+                          SvgPicture.asset(
+                            'svgs/noti.svg',
+                            width: 20,
+                            height: 20,
+                          ),
+                          Positioned(
+                            left: 5,
+                            child: Container(
+                              width: 20,
+                              height: 20,
+                              //color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 1.0, top: 3),
+                                child: Text('3',style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 8
+                                ),),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   GestureDetector(
@@ -148,7 +256,35 @@ class AllActivityScreen extends StatelessWidget {
                           height: 40,
                         ),
                         title: 'Followers',
-                        //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                      trailing: Stack(
+                        children: [
+                          Container(
+                            width: 10,
+                            height: 10,
+                            //color: Colors.yellow,
+                          ),
+                          SvgPicture.asset(
+                            'svgs/noti.svg',
+                            width: 20,
+                            height: 20,
+                          ),
+                          Positioned(
+                            left: 5,
+                            child: Container(
+                              width: 20,
+                              height: 20,
+                              //color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 1.0, top: 3),
+                                child: Text('3',style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 8
+                                ),),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   CustomListTile(
@@ -158,7 +294,35 @@ class AllActivityScreen extends StatelessWidget {
                         height: 40,
                       ),
                       title: 'Downloads',
-                      //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                    trailing: Stack(
+                      children: [
+                        Container(
+                          width: 10,
+                          height: 10,
+                          //color: Colors.yellow,
+                        ),
+                        SvgPicture.asset(
+                          'svgs/noti.svg',
+                          width: 20,
+                          height: 20,
+                        ),
+                        Positioned(
+                          left: 5,
+                          child: Container(
+                            width: 20,
+                            height: 20,
+                            //color: Colors.white,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 1.0, top: 3),
+                              child: Text('3',style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 8
+                              ),),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   CustomListTile(
                       leading: SvgPicture.asset(
@@ -167,7 +331,35 @@ class AllActivityScreen extends StatelessWidget {
                         height: 40,
                       ),
                       title: 'Requests',
-                      //trailing: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,)
+                    trailing: Stack(
+                      children: [
+                        Container(
+                          width: 10,
+                          height: 10,
+                          //color: Colors.yellow,
+                        ),
+                        SvgPicture.asset(
+                          'svgs/noti.svg',
+                          width: 20,
+                          height: 20,
+                        ),
+                        Positioned(
+                          left: 5,
+                          child: Container(
+                            width: 20,
+                            height: 20,
+                            //color: Colors.white,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 1.0, top: 3),
+                              child: Text('3',style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 8
+                              ),),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   GestureDetector(
                     onTap: (){
@@ -180,6 +372,35 @@ class AllActivityScreen extends StatelessWidget {
                           height: 40,
                         ),
                         title: 'Meali',
+                      trailing: Stack(
+                        children: [
+                          Container(
+                            width: 10,
+                            height: 10,
+                            //color: Colors.yellow,
+                          ),
+                          SvgPicture.asset(
+                            'svgs/noti.svg',
+                            width: 20,
+                            height: 20,
+                          ),
+                          Positioned(
+                            left: 5,
+                            child: Container(
+                              width: 20,
+                              height: 20,
+                              //color: Colors.white,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 1.0, top: 3),
+                                child: Text('3',style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 8
+                                ),),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   CustomListTile(
